@@ -1,0 +1,9 @@
+<script>
+var year = +prompt("Введи год:");
+	var year = year % 4 === 0 || year % 400 === 0;
+		if (year){
+			alert("Год " + year + " - 366 высокосный.");
+		} else {
+			alert("Год " + year + " - 365 не высокосный.");
+		}
+    </script>
