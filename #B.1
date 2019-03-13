@@ -1,0 +1,32 @@
+<script>
+      var a = +prompt('Введите сумму'); console.log(a);
+    var simpleUnits = ["","одна ","две ","три ","четыре ", "пять ","шесть ","семь ","восемь ","девять ","десять ","одинадцать ","двенадцать ","тринадцать ","четырнадцать ","пятнадцать ","шестнадцать ","семнадцать ","восемнадцать ","девятнадцать "];
+    var tens = ["", "", "двадцать ","тридцать ","сорок ","пятдесят ", "шестдесят ","семдесят ","восемдесят ","девяносто "];
+    var hundreds = ["","сто ","двести ","триста ","четыреста ","пятсот ","шестсот ","семсот ","восемсот ","девятсот "];
+    function numToWords (num) {
+        var word = "";
+
+      if(num>999) return "Слишком большая сумма";
+      if(num===0) return "ноль гривень";
+
+        var hund  = Math.floor(num/100);
+        word += hundreds[hund];
+        num -= hund*100;
+
+        if(num>=20){
+          var ten = Math.floor((num)/10);
+          word += tens[ten];
+          num -= ten*10;
+        };
+
+        word += simpleUnits[num];
+
+      if(num ===0 || num > 4) word += "гривень";
+          else if (num >1 && num <= 4) word += "гривни";
+          else word += "гривня";
+
+        return word;
+    };
+    alert(numToWords(a));
+ 
+ </script>
