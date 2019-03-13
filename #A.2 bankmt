@@ -1,0 +1,70 @@
+<script>
+  var sum = +prompt('ENTER SUM');
+  var rest = sum;
+  
+  var nom500 = Math.floor(rest/500);
+	  if(nom500 > 10) {
+		nom500 = 10;
+	  }
+	  rest -= nom500*500;
+	  var nom200 = Math.floor(rest/200);
+	  if(nom200 > 10) {
+		nom200 = 10;
+	  }
+	  rest -= nom200*200;
+	  var nom100 = Math.floor(rest/100);
+		  if(nom100 > 10){
+			nom100 = 10;
+		  }
+		  rest -= nom100*100;
+	  var nom50 = Math.floor(rest/50);
+		  if(nom50 > 10){
+			nom50 = 10;
+		  }
+		  rest -= nom50*50;
+	  var nom20 = Math.floor(rest/20);
+		  if(nom20 > 10){
+			nom20 = 10;
+		  }
+		  rest -= nom20*20;
+	  var nom10 = Math.floor(rest/10);
+		  if(nom10 > 10){
+			nom10 = 10;
+		  }
+		  rest -= nom10*10;
+	  var nom5 = Math.floor(rest/5);
+		  if(nom5 > 10) {
+			nom5 = 10;
+		  }
+		  rest -= nom5*5;
+	  var nom2 = Math.floor(rest/2);
+		  if(nom2 > 10){
+			nom2 = 10;
+		  }
+		  rest -= nom2*2;
+	  var nom1 = Math.floor(rest);
+		  if(nom1 > 10) {
+			nom1 = 10
+		  }
+		  rest -= nom1*1;
+		if(rest === 0) {
+		
+	  
+	  console.log("500 uah x " + nom500)
+	  console.log("200 uah x " + nom200)
+	  console.log("100 uah x " + nom100)
+	  console.log("50 uah x " + nom50)
+	  console.log("20 uah x " + nom20)
+	  console.log("10 uah x " + nom10)
+	  console.log("5 uah x " + nom5)
+	  console.log("2 uah x " + nom2)
+	  console.log("1 uah x " + nom1)
+	  console.log("Banknotes count: " +
+				  Number(nom1+nom2+nom5+
+						 nom10+nom20+nom50+
+						 nom100+nom200+nom500));
+	  }
+		else {
+		console.log("Cannot perform operation")
+	  }
+  </script>
