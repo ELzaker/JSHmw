@@ -7,7 +7,7 @@
         var word = "";
 
       if(num>999) return "Слишком большая сумма";
-      if(num===0) return "ноль гривень";
+      if(num===0) return "ноль гривен";
 
         var hund  = Math.floor(num/100);
         word += hundreds[hund];
@@ -21,9 +21,9 @@
 
         word += simpleUnits[num];
 
-      if(num ===0 || num > 4) word += "гривень";
-          else if (num >1 && num <= 4) word += "гривни";
-          else word += "гривня";
+      if(num ===0 || num > 4) word += "гривен";
+          else if (num >1 && num <= 4) word += "гривны";
+          else word += "гривна";
 
         return word;
     };
